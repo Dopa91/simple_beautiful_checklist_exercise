@@ -1,9 +1,5 @@
 # simple_beautiful_checklist
 
-Eine kleine, aber schöne Flutter-Checklisten-App, um das Verwenden von `SharedPreferences` zu üben.
-
-## Aufgabe
-
 In diesem Projekt wurde die bestehende MockDatabase durch ein neues SharedPreferencesRepository ersetzt. Ziel war es, Daten dauerhaft in den SharedPreferences zu speichern, sodass sie auch nach einem Neustart der App erhalten bleiben.
 
 Folgende Schritte wurden durchgeführt:
