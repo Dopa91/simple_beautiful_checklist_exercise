@@ -63,8 +63,32 @@ class ItemList extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.delete),
                 onPressed: () {
-                  repository.deleteItem(index);
-                  updateOnChange();
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text('Task löschen ?'),
+                        content: const Text(
+                            'Möchtest du diesen Task wirklich löschen?'),
+                        actions: [
+                          TextButton(
+                            child: const Text('Abbrechen'),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                          TextButton(
+                            child: const Text('Löschen'),
+                            onPressed: () {
+                              repository.deleteItem(index);
+                              updateOnChange();
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  );
                 },
               ),
             ],
