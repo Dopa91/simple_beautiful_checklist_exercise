@@ -10,7 +10,7 @@ void main() async {
   // Wird benötigt, um auf SharedPreferences zuzugreifen
   WidgetsFlutterBinding.ensureInitialized();
 
-  // TODO: Hier statt MockDatabase() ein SharedPreferencesRepository() verwenden.
+  // DONE: Hier statt MockDatabase() ein SharedPreferencesRepository() verwenden.
   final DatabaseRepository repository = SharedPreferencesRepository();
 
   runApp(MainApp(repository: repository));
